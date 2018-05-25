@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.caor.blackjackl.BlackJack">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#136C16">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtDinero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F9FF28"
+                android:text="Dinero"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/txtApuesta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apuesta : 0"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDealer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dealer Game"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/dealerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Player Game"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/playerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/optionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btnPedir"
+                    android:width="180dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:enabled="false"
+                    android:text="Pedir" />
+
+                <Button
+                    android:id="@+id/btnPlantar"
+                    android:width="180dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:enabled="false"
+                    android:text="Plantar" />
+
+
+            </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnDoblar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="doblar"
+                    android:enabled="false"
+                    android:text="Doblar" />
+
+                <Button
+                    android:id="@+id/btnNuevaMano"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:onClick="nuevaMano"
+                    android:text="Nueva Mano" />
+
+                <LinearLayout
+                    android:id="@+id/apuestaLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="apuestaJuego"
+                        android:text="100"
+                        />
+
+                    <Button
+                        android:id="@+id/btnDosc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="apuestaJuego"
+                        android:text="200" />
+
+                    <Button
+                        android:id="@+id/btnQuini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="apuestaJuego"
+                        android:text="500" />
+
+                    <Button
+                        android:id="@+id/btnMil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="apuestaJuego"
+                        android:text="1000" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnRepartir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:onClick="repartir"
+                    android:text="Repartir" />
+                <ImageButton
+                    android:id="@+id/btnQuitar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/undo"
+                    android:onClick="quitar"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
